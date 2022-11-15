@@ -265,7 +265,7 @@ h1, h2, h3, h4, h5, h6 {
 #home {
   width: 100%;
   height: 100vh;
-  background: url("../img/home-bg.jpg") top right no-repeat;
+  background: url("../img/home-bg-new.jpg") top right no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -278,7 +278,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #home:before {
   content: "";
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.4);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -387,6 +387,12 @@ section {
 
 .section-title p {
   margin-bottom: 0;
+}
+
+#main {
+  background: url("../img/main-bg.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 /*--------------------------------------------------------------
@@ -1003,7 +1009,6 @@ section {
 --------------------------------------------------------------*/
 .contact .info {
   width: 100%;
-  background: #fff;
 }
 
 .contact .info i {
