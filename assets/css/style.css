@@ -297,7 +297,7 @@ h6 {
 
 #home:before {
   content: "";
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.2);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -409,7 +409,7 @@ section {
 }
 
 .main {
-  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("../img/main-bg-2.jpg") no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("../img/main-bg-new.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
