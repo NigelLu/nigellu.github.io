@@ -670,7 +670,7 @@
       const repos = res.data;
       repos.forEach((repo) => {
         if (repo.name === "nigellu.github.io") {
-          document.getElementById("updateTime").append(`Last Updated: ${(new Date(repo.updated_at))}`);
+          document.getElementById("updateTime").append(`Last Updated: ${(new Date(repo.pushed_at))}`);
         }
       });
       dispatchEvent(new Event('load'));
