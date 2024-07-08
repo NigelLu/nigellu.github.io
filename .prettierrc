@@ -11,6 +11,5 @@
   "arrowParens": "always",
   "bracketSameLine": false,
   "filepath": "src/**/*.js",
-  "quoteProps": "as-needed",
-  "jsxBracketSameLine": true
+  "quoteProps": "as-needed"
 }
