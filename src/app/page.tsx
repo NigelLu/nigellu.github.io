@@ -17,12 +17,18 @@ import Footer from "../components/Footer";
 import Experience from "../components/Experience";
 
 export default function LandingPage() {
-  const [mode, setMode] = React.useState<PaletteMode>(
-    typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches
-      ? "light"
-      : "dark",
+  const [mode, setMode] = React.useState<PaletteMode>("light");
+  const LPtheme = React.useMemo(() => createTheme(getLPTheme(mode)), [mode]);
+
+  React.useEffect(
+    () =>
+      setMode(
+        typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches
+          ? "light"
+          : "dark",
+      ),
+    [],
   );
-  const LPtheme = createTheme(getLPTheme(mode));
 
   const toggleColorMode = () => {
     setMode((prev) => (prev === "dark" ? "light" : "dark"));

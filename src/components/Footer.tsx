@@ -8,6 +8,7 @@ import Stack from "@mui/material/Stack";
 import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
+import CircularProgress from "@mui/material/CircularProgress";
 
 import Instagram from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/GitHub";
@@ -27,6 +28,8 @@ export default function Footer() {
       const repos: Repo[] = res.data;
       repos.forEach((repo) => {
         let target = null;
+        const progressCircle = document.getElementById("circularProgress");
+        if (progressCircle) progressCircle.style.display = "none";
         switch (repo.name) {
           case "Resumes":
             target = document.getElementById("resumeUpdateTime");
@@ -56,10 +59,108 @@ export default function Footer() {
     >
       <Box
         sx={{
+          display: "flex",
+          flexDirection: { xs: "column", sm: "row" },
+          width: "100%",
+          justifyContent: "space-between",
+          py: 4,
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 4,
+            minWidth: { xs: "100%", sm: "60%" },
+          }}
+        >
+          <Box sx={{ width: { xs: "100%", sm: "60%" } }}>
+            <Typography variant='body2' gutterBottom sx={{ fontWeight: 600, mt: 2 }}>
+              Maintenance Timestamps:
+            </Typography>
+            <Stack direction='column' spacing={0.5} useFlexGap>
+              <CircularProgress id='circularProgress' sx={{ ml: 4, mt: 3 }} />
+              <Typography variant='body2' sx={{ color: "grey.300" }} align='center' id='resumeUpdateTime' />
+              <Typography variant='body2' sx={{ color: "grey.300" }} align='center' id='websiteUpdateTime' />
+            </Stack>
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            display: { xs: "none", sm: "flex" },
+            flexDirection: "column",
+            gap: 1,
+          }}
+        >
+          <Typography variant='body2' sx={{ fontWeight: "medium" }}>
+            Contact
+          </Typography>
+          <Typography color='text.secondary' variant='body2'>
+            xl3139@nyu.edu
+          </Typography>
+          <Typography color='text.secondary' variant='body2'>
+            xl3139@stern.nyu.edu
+          </Typography>
+          <Typography color='text.secondary' variant='body2'>
+            nigellu@outlook.com
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            display: { xs: "none", sm: "flex" },
+            flexDirection: "column",
+            gap: 1,
+          }}
+        >
+          <Typography variant='body2' sx={{ fontWeight: "medium" }}>
+            Links
+          </Typography>
+          <Link color='text.secondary' variant='body2' href='https://haorui.li'>
+            Harry Lee
+          </Link>
+          <Link color='text.secondary' variant='body2' href='https://victor-wang-902.github.io'>
+            Victor Wang
+          </Link>
+          <Link color='text.secondary' variant='body2' href='https://hmdliu.site'>
+            Hammond Liu
+          </Link>
+          <Link color='text.secondary' variant='body2' href='https://mstxy.github.io'>
+            William Zhang
+          </Link>
+          <Link color='text.secondary' variant='body2' href='https://sctyang.com'>
+            Scottie Yang
+          </Link>
+        </Box>
+        <Box
+          sx={{
+            display: { xs: "none", sm: "flex" },
+            flexDirection: "column",
+            gap: 1,
+          }}
+        >
+          <Typography variant='body2' sx={{ fontWeight: "medium" }}>
+            Legal
+          </Typography>
+          <Link color='text.secondary' variant='body2' href='#'>
+            Terms
+          </Link>
+          <Link color='text.secondary' variant='body2' href='#'>
+            Privacy
+          </Link>
+          <Link color='text.secondary' variant='body2' href='#'>
+            Contact
+          </Link>
+        </Box>
+      </Box>
+      <Box
+        sx={{
           width: "100%",
           display: "flex",
-          py: { xs: 1, sm: 2 },
+          pt: { xs: 1, sm: 2 },
+          pb: { xs: 1.5, sm: 3 },
           justifyContent: "space-between",
+          borderTop: "1px solid",
+          borderColor: "divider",
         }}
       >
         <Stack direction='row' style={{ marginTop: "0.6rem" }}>
@@ -103,21 +204,6 @@ export default function Footer() {
           >
             <LinkedInIcon />
           </IconButton>
-        </Stack>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          py: { xs: 1, sm: 2 },
-          width: "100%",
-          borderTop: "1px solid",
-          borderColor: "divider",
-        }}
-      >
-        <Stack direction='column' spacing={0.5} useFlexGap sx={{ ml: -3 }}>
-          <Typography variant='body2' sx={{ color: "grey.300" }} align='center' id='resumeUpdateTime' />
-          <Typography variant='body2' sx={{ color: "grey.300" }} align='center' id='websiteUpdateTime' />
         </Stack>
       </Box>
     </Container>
