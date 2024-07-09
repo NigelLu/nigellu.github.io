@@ -21,17 +21,42 @@ const items = [
   {
     icon: <SchoolIcon />,
     title: "Education",
-    description: "All my education experiences",
+    description: (
+      <>
+        M.S. in Computer Science @NYU
+        <br />
+        B.S. in Data Science @NYU Shanghai
+        <br />
+      </>
+    ),
   },
   {
     icon: <WorkIcon />,
     title: "Professional",
-    description: "All my professional experiences",
+    description: (
+      <>
+        Intern @NYC DDC
+        <br />
+        ex-Intern @eBay
+        <br />
+        ex-Software Engineer @Kaizntree
+        <br />
+        ex-Intern @Expsoft
+      </>
+    ),
   },
   {
     icon: <AudiotrackIcon />,
     title: "Misc",
-    description: "My other experiences I wanna share",
+    description: (
+      <>
+        Volunteer @SteppingStones
+        <br />
+        Tech nerd @Tech
+        <br />
+        Bikoholic @Bike
+      </>
+    ),
   },
 ];
 
@@ -87,7 +112,7 @@ export default function Experience() {
             ))}
           </Grid>
           <Card variant='outlined' sx={{ display: { xs: "auto", sm: "none" }, mt: 4 }}>
-            <Box sx={{ px: 2, pb: 2 }}>
+            <Box sx={{ px: 2, py: 2 }}>
               <Typography gutterBottom sx={{ color: "text.primary", fontWeight: "medium" }}>
                 {selectedFeature.title}
               </Typography>
