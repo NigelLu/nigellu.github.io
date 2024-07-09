@@ -16,9 +16,9 @@ export default function Home() {
         width: "100%",
         height: "100vh",
         backgroundRepeat: "no-repeat",
-        backgroundImage: "radial-gradient(ellipse 80% 50% at 50% -20%, hsl(210, 100%, 90%), transparent)",
+        backgroundImage: "radial-gradient(ellipse 80% 50% at 50% -20%, hsl(210, 100%, 80%), transparent)",
         ...theme.applyStyles("dark", {
-          backgroundImage: "radial-gradient(ellipse 80% 50% at 50% -20%, hsl(210, 100%, 16%), transparent)",
+          backgroundImage: "radial-gradient(ellipse 80% 50% at 50% -20%, hsl(210, 100%, 30%), transparent)",
         }),
       })}
     >
@@ -58,7 +58,6 @@ export default function Home() {
           </Typography>
           <Typing
             s={[
-              "I'm Xiaochen (Nigel)",
               "I belong to the <b><i>outdoor<i/><b/> ☀️",
               "I'm a <b><i>cyclist<i/><b/> 🚵‍♂️",
               "I'm a <b><i>civil aviation lover<i/><b/> ✈️",

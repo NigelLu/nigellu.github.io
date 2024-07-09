@@ -28,13 +28,15 @@ export default function Footer() {
       repos.forEach((repo) => {
         let target = null;
         switch (repo.name) {
-          case "nigellu.github.io":
-            target = document.getElementById("websiteUpdateTime");
-            if (target && !target.childNodes.length) target.append(`Last Updated: ${new Date(repo.pushed_at)}`);
-            break;
           case "Resumes":
             target = document.getElementById("resumeUpdateTime");
-            if (target && !target.childNodes.length) target.append(`Last Updated: ${new Date(repo.pushed_at)}`);
+            if (target && !target.childNodes.length)
+              target.append(`Resume Last Updated: ${new Date(repo.pushed_at).toLocaleString()}`);
+            break;
+          case "nigellu.github.io":
+            target = document.getElementById("websiteUpdateTime");
+            if (target && !target.childNodes.length)
+              target.append(`Website Last Updated: ${new Date(repo.pushed_at).toLocaleString()}`);
             break;
           default:
             break;
@@ -49,37 +51,33 @@ export default function Footer() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        py: { xs: 4, sm: 5 },
         textAlign: { sm: "center", md: "left" },
       }}
     >
       <Box
         sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          pt: { xs: 4, sm: 8 },
           width: "100%",
-          borderTop: "1px solid",
-          borderColor: "divider",
+          display: "flex",
+          py: { xs: 1, sm: 2 },
+          justifyContent: "space-between",
         }}
       >
-        <Stack direction='column' spacing={1} useFlexGap style={{ marginTop: "0.6rem" }}>
-          <Stack direction='row'>
-            <PersonalIcon />
-            <div>
-              <Link
-                target='_blank'
-                variant='body1'
-                sx={{ fontWeight: 600, ml: -4 }}
-                href='https://raw.githubusercontent.com/NigelLu/Resumes/master/resume.pdf'
-              >
-                Resume
-              </Link>
-            </div>
-          </Stack>
-          <Typography variant='body2' sx={{ color: "grey.400", ml: -4 }} align='center' id='resumeUpdateTime' />
+        <Stack direction='row' style={{ marginTop: "0.6rem" }}>
+          <PersonalIcon />
+          <div>
+            <Link
+              target='_blank'
+              variant='body1'
+              sx={{ fontWeight: 600, ml: -4 }}
+              href='https://raw.githubusercontent.com/NigelLu/Resumes/master/resume.pdf'
+            >
+              Resume
+            </Link>
+          </div>
         </Stack>
-        <Typography variant='body2' sx={{ color: "grey.400" }} id='websiteUpdateTime' />
+        <Typography variant='body2' sx={{ color: "grey.400", mt: 1.5, ml: -3 }} align='center'>
+          {">"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thank you for visiting my site&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"<"}
+        </Typography>
         <Stack direction='row' spacing={1} useFlexGap sx={{ justifyContent: "left", color: "text.secondary" }}>
           <IconButton
             color='inherit'
@@ -105,6 +103,21 @@ export default function Footer() {
           >
             <LinkedInIcon />
           </IconButton>
+        </Stack>
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          py: { xs: 1, sm: 2 },
+          width: "100%",
+          borderTop: "1px solid",
+          borderColor: "divider",
+        }}
+      >
+        <Stack direction='column' spacing={0.5} useFlexGap sx={{ ml: -3 }}>
+          <Typography variant='body2' sx={{ color: "grey.300" }} align='center' id='resumeUpdateTime' />
+          <Typography variant='body2' sx={{ color: "grey.300" }} align='center' id='websiteUpdateTime' />
         </Stack>
       </Box>
     </Container>

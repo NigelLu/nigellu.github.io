@@ -2,18 +2,18 @@
 
 "use client";
 
-import Image from "next/image";
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
+import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
+import { styled } from "@mui/material/styles";
+import WorkIcon from "@mui/icons-material/Work";
 import { Chip as MuiChip } from "@mui/material";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import { styled } from "@mui/material/styles";
-import WorkIcon from "@mui/icons-material/Work";
 import SchoolIcon from "@mui/icons-material/School";
 import AudiotrackIcon from "@mui/icons-material/Audiotrack";
 
@@ -205,15 +205,15 @@ export default function Experience() {
           </Stack>
         </Grid>
         <Grid item xs={12} md={6} sx={{ display: { xs: "none", sm: "flex" }, width: "100%" }}>
-          <Card
-            variant='outlined'
+          <Paper
+            elevation={4}
+            square={false}
             sx={{
               width: "100%",
               display: { xs: "none", sm: "flex" },
-              pointerEvents: "none",
             }}
           >
-            <Box
+            {/* <Box
               sx={(theme) => ({
                 width: 400,
                 height: 550,
@@ -225,8 +225,8 @@ export default function Experience() {
               })}
             >
               <Image src='/experiences/resume.png' width={1378} height={1800} alt='Resume' />
-            </Box>
-          </Card>
+            </Box> */}
+          </Paper>
         </Grid>
       </Grid>
     </Container>
