@@ -11,7 +11,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 import getLPTheme from "./getLPTheme";
 import Home from "../components/Home";
-import Blogs from "../components/Blogs";
+// import Blogs from "../components/Blogs";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Experience from "../components/Experience";
@@ -42,8 +42,8 @@ export default function LandingPage() {
       <Box sx={{ bgcolor: "background.default" }}>
         <Experience />
         <Divider />
-        <Blogs />
-        <Divider />
+        {/* <Blogs /> */}
+        {/* <Divider /> */}
         <Footer />
       </Box>
     </ThemeProvider>

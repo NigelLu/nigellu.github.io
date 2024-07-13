@@ -1,19 +1,20 @@
 /** @format */
+"use client";
 
 import * as React from "react";
-import { PaletteMode } from "@mui/material";
 import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
 import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import Container from "@mui/material/Container";
+import { PaletteMode } from "@mui/material";
+import Toolbar from "@mui/material/Toolbar";
 import Divider from "@mui/material/Divider";
 import MenuItem from "@mui/material/MenuItem";
-import Drawer from "@mui/material/Drawer";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import ToggleColorMode from "./ToggleColorMode";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import IconButton from "@mui/material/IconButton";
+import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 
 import PersonalIcon from "./PersonalIcon";
 
@@ -24,7 +25,7 @@ interface NavBarProps {
 
 const capitalize: (s: string) => string = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 
-const navBarItems = ["home", "experience", "blogs", "contact & links"];
+const navBarItems = ["home", "experience", "resume", "contact & links"];
 
 export default function NavBar({ mode, toggleColorMode }: NavBarProps) {
   const [open, setOpen] = React.useState(false);
@@ -34,6 +35,10 @@ export default function NavBar({ mode, toggleColorMode }: NavBarProps) {
   };
 
   const scrollToSection = (sectionId: string) => {
+    if (sectionId === "resume") {
+      window.open("https://raw.githubusercontent.com/NigelLu/Resumes/master/resumeLatest.docx");
+      return;
+    }
     const sectionElement = document.getElementById(sectionId);
     const offset = 64;
     if (sectionElement) {

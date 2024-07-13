@@ -78,10 +78,10 @@ export default function Footer() {
             <Typography variant='body2' gutterBottom sx={{ fontWeight: 600, mt: 2 }}>
               Maintenance Timestamps:
             </Typography>
-            <Stack direction='column' spacing={0.5} useFlexGap>
-              <CircularProgress id='circularProgress' sx={{ ml: 4, mt: 3 }} />
-              <Typography variant='body2' sx={{ color: "grey.300" }} align='center' id='resumeUpdateTime' />
-              <Typography variant='body2' sx={{ color: "grey.300" }} align='center' id='websiteUpdateTime' />
+            <Stack direction='column' spacing={0.5} sx={{ ml: 0.5 }} useFlexGap>
+              <CircularProgress id='circularProgress' size={20} sx={{ ml: 5, mt: 3 }} />
+              <Typography variant='body2' sx={{ color: "grey.300" }} align='left' id='resumeUpdateTime' />
+              <Typography variant='body2' sx={{ color: "grey.300" }} align='left' id='websiteUpdateTime' />
             </Stack>
           </Box>
         </Box>
@@ -170,7 +170,7 @@ export default function Footer() {
               target='_blank'
               variant='body1'
               sx={{ fontWeight: 600, ml: -4 }}
-              href='https://raw.githubusercontent.com/NigelLu/Resumes/master/resume.pdf'
+              href='https://raw.githubusercontent.com/NigelLu/Resumes/master/resumeLatest.docx'
             >
               Resume
             </Link>

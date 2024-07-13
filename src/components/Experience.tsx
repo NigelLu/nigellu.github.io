@@ -7,13 +7,15 @@ import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
-import Paper from "@mui/material/Paper";
+import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
+import CardMedia from "@mui/material/CardMedia";
 import WorkIcon from "@mui/icons-material/Work";
 import { Chip as MuiChip } from "@mui/material";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
+import CardContent from "@mui/material/CardContent";
 import SchoolIcon from "@mui/icons-material/School";
 import AudiotrackIcon from "@mui/icons-material/Audiotrack";
 
@@ -28,6 +30,38 @@ const items = [
         B.S. in Data Science @NYU Shanghai
         <br />
       </>
+    ),
+    content: (
+      <Card sx={{ width: "100%", overflowY: "scroll" }}>
+        <CardMedia sx={{ height: "40%" }} image='/imgs/Wsq.jpg' title='Washington Square Park - Summer' />
+        <CardContent>
+          <Typography gutterBottom variant='h5' component='div'>
+            New York University
+          </Typography>
+          <Stack direction='column' gap={1} sx={{ pb: 1 }}>
+            <Typography variant='body2' color='text.secondary'>
+              - <b>M.S. in Computer Science</b> (2023 - Present)
+            </Typography>
+            <Typography variant='body2' color='text.secondary'>
+              - Cumulative GPA: 3.95
+            </Typography>
+          </Stack>
+          <Stack direction='column' gap={1} sx={{ pt: 1, borderTop: "1px solid", borderColor: "divider" }}>
+            <Typography variant='body2' color='text.secondary'>
+              - <b>B.S. in Data Science</b> (2019 - 2023)
+            </Typography>
+            <Typography variant='body2' color='text.secondary'>
+              - Double major in Business &amp; Finance, with a minor in Computer Science
+            </Typography>
+            <Typography variant='body2' color='text.secondary'>
+              - Cumulative GPA: 3.91; Major GPA: 3.97
+            </Typography>
+            <Typography variant='body2' color='text.secondary'>
+              - Honors: <i>Magna Cum Laude; NYU Honors Scholar; Dean&apos;s List 2019-2023</i>
+            </Typography>
+          </Stack>
+        </CardContent>
+      </Card>
     ),
   },
   {
@@ -44,6 +78,105 @@ const items = [
         ex-Intern @Expsoft
       </>
     ),
+    content: (
+      <Card sx={{ width: "100%", overflowY: "scroll" }}>
+        <CardMedia sx={{ height: "40%" }} image='/imgs/TheGetty.jpg' title='Sunset at the Getty Centre - LA' />
+        <CardContent>
+          <Typography gutterBottom variant='h5' component='div'>
+            Seeking 2025 Full-time
+          </Typography>
+          <Stack direction='column' gap={1} sx={{ pb: 1 }}>
+            <Stack direction='row' gap={1} alignItems='center'>
+              <Avatar sx={{ backgroundColor: "white" }} alt='NYC DDC' src='/imgs/NYC_DDC_Logo.png' />
+              <Stack direction='column' gap={0.5}>
+                <Typography variant='body2' color='text.secondary'>
+                  <b>Department of Design and Construction (DDC), NYC Gov</b> (2024.06 - 2024.08)
+                </Typography>
+                <Typography variant='body2' color='text.secondary'>
+                  Software Engineer Intern
+                </Typography>
+              </Stack>
+            </Stack>
+            <Typography variant='body2' color='text.secondary'>
+              Developed and optimized machine learning models (Azure ML Studio, PySpark) for predictive construction
+              planning, and presented the results as a React app with Django to deliver data insights to 700+ non-data
+              scientist users at DDC.
+            </Typography>
+          </Stack>
+          <Stack direction='column' gap={1} sx={{ pb: 1 }}>
+            <Stack direction='row' gap={1} alignItems='center'>
+              <Avatar sx={{ backgroundColor: "white" }} alt='NYU' src='/imgs/NYU_Logo.jpg' />
+              <Stack direction='column' gap={0.5}>
+                <Typography variant='body2' color='text.secondary'>
+                  <b>Nexus, New York University</b> (2024.01 - Present)
+                </Typography>
+                <Typography variant='body2' color='text.secondary'>
+                  Graduate Assistant
+                </Typography>
+              </Stack>
+            </Stack>
+            <Typography variant='body2' color='text.secondary'>
+              Enhanced NYU SPS faculty&apos;s digital proficiency through workshops and data analysis, improving
+              students&apos; learning outcomes and faculty satisfaction, while also making resource accessibility on the
+              Nexus Wix site.
+            </Typography>
+          </Stack>
+          <Stack direction='column' gap={1} sx={{ pb: 1 }}>
+            <Stack direction='row' gap={1} alignItems='center'>
+              <Avatar sx={{ backgroundColor: "white" }} alt='eBay' src='/imgs/eBay_Logo.png' />
+              <Stack direction='column' gap={0.5}>
+                <Typography variant='body2' color='text.secondary'>
+                  <b>eBay Inc.</b> (2022.09 - 2023.08)
+                </Typography>
+                <Typography variant='body2' color='text.secondary'>
+                  Software Engineer Intern
+                </Typography>
+              </Stack>
+            </Stack>
+            <Typography variant='body2' color='text.secondary'>
+              Drove innovative project initiatives (live cluster status monitoring), modernized UIs (encrypted password
+              exchange system), and automated tasks (L7 rule configuration) for infrastructure engineering using React,
+              Redux, Django, and PostgreSQL.
+            </Typography>
+          </Stack>
+          <Stack direction='column' gap={1} sx={{ pb: 1 }}>
+            <Stack direction='row' gap={1} alignItems='center'>
+              <Avatar sx={{ backgroundColor: "white" }} alt='Kaizntree' src='/imgs/Kaizntree_Logo.jpg' />
+              <Stack direction='column' gap={0.5}>
+                <Typography variant='body2' color='text.secondary'>
+                  <b>Kaizntree Co.</b> (2021.09 - 2022.03 &amp; 2023.09-2024.02)
+                </Typography>
+                <Typography variant='body2' color='text.secondary'>
+                  Full-stack Engineer
+                </Typography>
+              </Stack>
+            </Stack>
+            <Typography variant='body2' color='text.secondary'>
+              Pioneered a small business management solution using Vue.js, Django, and PostgreSQL, reducing small
+              business management time by over 85% (e.g., sync stock across sales channels, update/manage stock at
+              different warehouses).
+            </Typography>
+          </Stack>
+          <Stack direction='column' gap={1} sx={{ pb: 1 }}>
+            <Stack direction='row' gap={1} alignItems='center'>
+              <Avatar sx={{ backgroundColor: "white" }} alt='Expsoft' src='/imgs/Expsoft_Logo.png' />
+              <Stack direction='column' gap={0.5}>
+                <Typography variant='body2' color='text.secondary'>
+                  <b>Expsoft LLC.</b> (2021.05 - 2021.09)
+                </Typography>
+                <Typography variant='body2' color='text.secondary'>
+                  Software Engineer Intern
+                </Typography>
+              </Stack>
+            </Stack>
+            <Typography variant='body2' color='text.secondary'>
+              Developed customizable online auditing platforms for government use with Spring Boot and MySQL, which
+              secured a $400,000 project from the Soochow government
+            </Typography>
+          </Stack>
+        </CardContent>
+      </Card>
+    ),
   },
   {
     icon: <AudiotrackIcon />,
@@ -56,6 +189,17 @@ const items = [
         <br />
         Bikoholic @Bike
       </>
+    ),
+
+    content: (
+      <Card sx={{ width: "100%" }}>
+        <CardMedia sx={{ height: "87.5%" }} image='/imgs/Flight.jpg' title='Forever Wild' />
+        <CardContent>
+          <Typography gutterBottom variant='h5' component='div'>
+            Always Curious, Forever Wild
+          </Typography>
+        </CardContent>
+      </Card>
     ),
   },
 ];
@@ -95,7 +239,7 @@ export default function Experience() {
   return (
     <Container id='experience' sx={{ py: { xs: 4, sm: 8 } }}>
       <Grid container spacing={6}>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={5} sx={{ height: "55vh" }}>
           <div>
             <Typography component='h2' variant='h4' sx={{ color: "text.primary", mb: { xs: 2, sm: 4 } }}>
               Experience
@@ -111,6 +255,7 @@ export default function Experience() {
               />
             ))}
           </Grid>
+          {/* Mobile */}
           <Card variant='outlined' sx={{ display: { xs: "auto", sm: "none" }, mt: 4 }}>
             <Box sx={{ px: 2, py: 2 }}>
               <Typography gutterBottom sx={{ color: "text.primary", fontWeight: "medium" }}>
@@ -121,6 +266,7 @@ export default function Experience() {
               </Typography>
             </Box>
           </Card>
+          {/* Desktop */}
           <Stack
             direction='column'
             spacing={2}
@@ -204,29 +350,13 @@ export default function Experience() {
             ))}
           </Stack>
         </Grid>
-        <Grid item xs={12} md={6} sx={{ display: { xs: "none", sm: "flex" }, width: "100%" }}>
-          <Paper
-            elevation={4}
-            square={false}
-            sx={{
-              width: "100%",
-              display: { xs: "none", sm: "flex" },
-            }}
-          >
-            {/* <Box
-              sx={(theme) => ({
-                width: 400,
-                height: 550,
-                backgroundSize: "contain",
-                backgroundImage: "var(--items-imageLight)",
-                ...theme.applyStyles("dark", {
-                  backgroundImage: "var(--items-imageDark)",
-                }),
-              })}
-            >
-              <Image src='/experiences/resume.png' width={1378} height={1800} alt='Resume' />
-            </Box> */}
-          </Paper>
+        <Grid
+          item
+          xs={12}
+          md={7}
+          sx={{ display: { xs: "none", sm: "flex" }, width: "100%", mt: "7.5%", height: "55vh" }}
+        >
+          {selectedFeature.content}
         </Grid>
       </Grid>
     </Container>
